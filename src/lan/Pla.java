@@ -12,12 +12,7 @@ public class Pla {
 		int w1,w2,b;
 		w1=w2=0;
 		b=0;//½Ø¾à
-<<<<<<< HEAD
 		while (true){
-=======
-		boolean flag = false;
-		while (!flag){
->>>>>>> 09bd1be98c2c024260958479c823afc373046ad6
 			int count =0;
 			for(int i=0;i<points.size();i++){
 				//System.out.println("===="+i+"===="+(points.get(i).lab*(w1*points.get(i).x+w2*points.get(i).y)));
@@ -44,10 +39,7 @@ public class Pla {
 		Point p3= new Point(1,2,-1);
 		Point p4= new Point(2,1,-1);
 		Point p5= new Point(2,2,-1);
-<<<<<<< HEAD
 		Point p6= new Point(0,2,1);
-=======
->>>>>>> 09bd1be98c2c024260958479c823afc373046ad6
 		points.add(p1);
 		points.add(p2);
 		points.add(p3);
