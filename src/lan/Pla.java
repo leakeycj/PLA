@@ -9,19 +9,21 @@ public class Pla {
 	//public static  List< Point> points = new ArrayList<Point>();
 	
 	public Pla(List< Point> points){
-		int w1,w2;
+		int w1,w2,b;
 		w1=w2=0;
+		b=0;//½Ø¾à
 		boolean flag = false;
 		while (!flag){
 			int count =0;
 			for(int i=0;i<points.size();i++){
 				//System.out.println("===="+i+"===="+(points.get(i).lab*(w1*points.get(i).x+w2*points.get(i).y)));
-				if((points.get(i).lab*(w1*points.get(i).x+w2*points.get(i).y))<=0){
+				if((points.get(i).lab*(w1*points.get(i).x+w2*points.get(i).y+b))<=0){
 					
 					w1 = w1 + points.get(i).x*points.get(i).lab;
 					w2 = w2 + points.get(i).y*points.get(i).lab;
-					System.out.println(w1+" "+w2);
-					continue ;
+					b = b + points.get(i).lab;//¸üÐÂ½Ø¾à
+					System.out.println(w1+" "+w2+" "+ b);
+					count--;
 				}
 				count++;
 
@@ -33,11 +35,11 @@ public class Pla {
 	}
 	public static void main(String[] args) {
 		List< Point> points = new ArrayList<Point>();
-		Point p1= new Point(0, 1, -1);
-		Point p2= new Point(1,1,1);
-		Point p3= new Point(-1,2,-1);
-		Point p4= new Point(2,3,1);
-		Point p5= new Point(-1,-2,-1);
+		Point p1= new Point(0, 1, 1);
+		Point p2= new Point(1,0,1);
+		Point p3= new Point(1,2,-1);
+		Point p4= new Point(2,1,-1);
+		Point p5= new Point(2,2,-1);
 		points.add(p1);
 		points.add(p2);
 		points.add(p3);
